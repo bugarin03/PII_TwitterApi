@@ -34,7 +34,24 @@ namespace UcuUber
 
         public  void Movement (Driver driver, Passanger passanger )
         {
-            
+            if (driver.Capacity=1)
+            {
+
+            }
+            else
+            {
+                
+            }
+
+            if (driver.Capacity=1)
+            {
+
+            }
+            else
+            {
+                
+            }
+
         }
     }
 }
