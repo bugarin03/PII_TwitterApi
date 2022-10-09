@@ -32,25 +32,55 @@ namespace UcuUber
 
         public List<Passanger> Passangers { get; set; } = new List<Passanger>();
 
-        public  void Movement (Driver driver, Passanger passanger )
+        public void Call (int passangersAmount)
         {
-            if (driver.Capacity=1)
+            if (passangersAmount==1)
             {
-
+                foreach (Driver driver in FreeNormalDrivers)
+                {
+                    
+                }
             }
             else
             {
-                
+                foreach (Driver driver in FreePoolDrivers)
+                {
+                    
+                }
             }
+        }
+        public  void StartJorney (Driver driver, Passanger passanger )
+        {
 
-            if (driver.Capacity=1)
+
+            if (driver.Capacity==1)
             {
-
+                FreeNormalDrivers.Remove(driver);
+                BusyNormalDrivers.Add(driver);
             }
             else
             {
-                
+                FreePoolDrivers.Remove(driver);
+                BusyPoolDrivers.Add(driver);
             }
+
+            Passangers.Add(passanger);
+
+        }
+        public  void FinishJorney (Driver driver, Passanger passanger )
+        {
+            if (driver.Capacity==1)
+            {
+                FreeNormalDrivers.Add(driver);
+                BusyNormalDrivers.Remove(driver);
+            }
+            else
+            {
+                FreePoolDrivers.Add(driver);
+                BusyPoolDrivers.Remove(driver);
+            }
+
+            Passangers.Remove(passanger);
 
         }
     }

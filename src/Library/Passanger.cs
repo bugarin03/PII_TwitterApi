@@ -5,6 +5,14 @@ namespace UcuUber
     /// </summary>
     public class Passanger : Person
     {
-       
+       public void Call()
+       {
+            
+       }
+
+       public void RateDriver(Driver driver, int rating)
+        {
+            driver.Rating.EffectiveRating = driver.Rating.AddRating(rating);
+        }
     }
 }
