@@ -8,7 +8,6 @@ namespace TwitterUCU
     {
         static void Main(string[] args)
         {
-
             Info Lists =  Info.Data;
             var twitter = new TwitterImage();
             Console.WriteLine(twitter.PublishToTwitter("New Employee 2! ",@"bill2.jpg"));
@@ -19,7 +18,6 @@ namespace TwitterUCU
             Call trip = Gonzalo.Call(Lists, "Feria", 2);
             Pepe.AceptCall(Lists,trip);
             Pepe.SuccessfulTrip(Lists,trip);
-            
         }
     }
 }
