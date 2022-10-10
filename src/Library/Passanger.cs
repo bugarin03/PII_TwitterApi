@@ -9,7 +9,7 @@ namespace UcuUber
     /// </summary>
     public class Passanger : Person
     {
-        public Passanger (string name, string surname, string id, string phoneNumber, string userId)
+        public Passanger (string name, string surname, string id, string phoneNumber, string userId, string image)
         {
             this.Name = name;
             this.Surname = surname;
@@ -17,14 +17,13 @@ namespace UcuUber
             this.PhoneNumber = phoneNumber;
             this.UserId = userId;
             var twitter = new TwitterImage();
-            Console.WriteLine(twitter.PublishToTwitter("Nuevo pasagero", @"PathToImage.png"));
+            Console.WriteLine(twitter.PublishToTwitter($"Nuevo pasagero:\n {Name} ", @$"{image}"));
         }
-       public void Call(string destination, int passangersAmount)
+       public void Call(Info data, string destination, int passangersAmount)
        {
             Call trip = new Call (this, destination, passangersAmount);
-            Info.Notification(trip);
+            data.Notification(trip);
        }
-
        public void RateDriver(Driver driver, int rating)
         {
             driver.Rating.EffectiveRating = driver.Rating.AddRating(rating);

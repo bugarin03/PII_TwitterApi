@@ -9,8 +9,9 @@ namespace UcuUber
     public class Driver : Person
     {
         public int Capacity {get; set;}
+        public string Bio {get; set;}
 
-        public Driver (int capacity, string name, string surname, string id, string phoneNumber, string userId )
+        public Driver (int capacity, string name, string surname, string id, string phoneNumber, string userId, string bio, string image )
         {
             this.Name = name;
             this.Surname = surname;
@@ -18,20 +19,15 @@ namespace UcuUber
             this.ID = id;
             this.PhoneNumber = phoneNumber;
             this.UserId = userId;
+            this.Bio = bio;
+            this.Image = image;
             var twitter = new TwitterImage();
-            Console.WriteLine(twitter.PublishToTwitter("Nuevo conductor", @"PathToImage.png"));
+            Console.WriteLine(twitter.PublishToTwitter($"Nuevo conductor: \nBienvenido a nuestra comunidad {Name} \n {Bio}",  @$"{image}"));
         }
         
-        public void AceptCall (Call call)
+        public void AceptCall (Info data, Call call)
         {
-            if (call.PassangersAmount>1 && this.Capacity>1)
-            {
-                Info.StartJorney(this, call);
-            }
-            else
-            {
-                Info.StartJorney(this, call);
-            }  
+            data.StartJorney(this, call);
         }
 
         public void RatePassanger(Passanger passanger, int rating)

@@ -60,8 +60,6 @@ namespace UcuUber
         }
         public void StartJorney (Driver driver, Call call)
         {
-
-
             if (driver.Capacity==1)
             {
                 NormalCalls.Remove(call);

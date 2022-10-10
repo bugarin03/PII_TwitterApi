@@ -12,6 +12,10 @@ namespace UcuUber
 
         public Rating Rating { get; set; }
 
-        public string UserId;
+        public string UserId { get; set; }
+
+        public string Image { get; set; }
+
+        
     }
 }
