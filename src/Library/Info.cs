@@ -10,7 +10,7 @@ namespace UcuUber
         {
 
         }
-    
+
         public static Info Data
         {
             get
@@ -22,7 +22,7 @@ namespace UcuUber
                 return data;
             }
         }
-        
+
         public List<Driver> FreeNormalDrivers { get; set; } = new List<Driver>();
 
         public List<Driver> FreePoolDrivers { get; set; } = new List<Driver>();
@@ -39,9 +39,9 @@ namespace UcuUber
 
         public List<Call> PoolCalls { get; set; } = new List<Call>();
 
-        public void Notification (Call call)
+        public void Notification(Call call)
         {
-            if (call.PassangersAmount==1)
+            if (call.PassangersAmount == 1)
             {
                 foreach (Driver driver in FreeNormalDrivers)
                 {
@@ -61,9 +61,9 @@ namespace UcuUber
             }
         }
 
-        public void NewDriver (Driver driver)
+        public void NewDriver(Driver driver)
         {
-            if (driver.Capacity==1)
+            if (driver.Capacity == 1)
             {
                 FreeNormalDrivers.Add(driver);
             }
@@ -73,19 +73,19 @@ namespace UcuUber
             }
         }
 
-        public void NewPassanger (Passanger passanger)
+        public void NewPassanger(Passanger passanger)
         {
             Passangers.Add(passanger);
         }
-        public void StartJourney (Driver driver, Call call)
+        public void StartJourney(Driver driver, Call call)
         {
-            if (driver.Capacity==1)
+            if (driver.Capacity == 1)
             {
                 NormalCalls.Remove(call);
                 FreeNormalDrivers.Remove(driver);
                 BusyNormalDrivers.Add(driver);
-                var twitter = new TwitterMessage();
-                twitter.SendMessage("Su conductor esta en camino", call.Passanger.UserId);
+                // var twitter = new TwitterMessage();
+                //twitter.SendMessage("Su conductor esta en camino", call.Passanger.UserId);
             }
             else
             {
@@ -99,9 +99,9 @@ namespace UcuUber
             PassangersOnBoard.Add(call.Passanger);
 
         }
-        public  void FinishJourney (Driver driver, Call call)
+        public void FinishJourney(Driver driver, Call call)
         {
-            if (driver.Capacity==1)
+            if (driver.Capacity == 1)
             {
                 FreeNormalDrivers.Add(driver);
                 BusyNormalDrivers.Remove(driver);

@@ -9,11 +9,11 @@ namespace UcuUber
     /// </summary>
     public class Driver : Person
     {
-        public string Car {get; set;}
-        public int Capacity {get; set;}
-        public string Bio {get; set;}
+        public string Car { get; set; }
+        public int Capacity { get; set; }
+        public string Bio { get; set; }
 
-        public Driver (int capacity, string name, string surname, string car, string id, string phoneNumber, string userId, string bio, string image, Info data )
+        public Driver(int capacity, string name, string surname, string car, string id, string phoneNumber, string userId, string bio, string image, Info data)
         {
             this.Name = name;
             this.Surname = surname;
@@ -24,7 +24,7 @@ namespace UcuUber
             this.UserId = userId;
             this.Bio = bio;
             this.Image = image;
-        
+
             if (FoundFace(image))
             {
                 Console.WriteLine("Tiene una cara muy bonita, es aceptado!");
@@ -32,22 +32,22 @@ namespace UcuUber
             else
             {
                 Console.WriteLine("No hemos encontrado su hermosa cara o no esta sonriendo, le hemos reasignado una foto");
-                this.Image = @"PII_TwitterApi\src\Imagenes\logo_ucu_200x102.jpg"; 
+                this.Image = @"PII_TwitterApi\src\Imagenes\logo_ucu_200x102.jpg";
             }
 
             var twitter = new TwitterImage();
-            Console.WriteLine(twitter.PublishToTwitter($"Nuevo conductor: \nBienvenido a nuestra comunidad {Name} \n {Bio}",  @$"{image}"));
+            Console.WriteLine(twitter.PublishToTwitter($"Nuevo conductor: \nBienvenido a nuestra comunidad {Name} \n {Bio}", $"{Image}"));
             data.NewDriver(this);
         }
-        
-        public void AceptCall (Info data, Call call)
+
+        public void AceptCall(Info data, Call call)
         {
-            data.StartJourney(this, call); 
+            data.StartJourney(this, call);
         }
 
-        public void SuccessfulTrip (Info data, Call call)
+        public void SuccessfulTrip(Info data, Call call)
         {
-            data.FinishJourney(this,call);
+            data.FinishJourney(this, call);
         }
 
         public void RatePassanger(Passanger passanger, int rating)
@@ -58,7 +58,7 @@ namespace UcuUber
         public bool FoundFace(string image)
         {
             CognitiveFace cog = new CognitiveFace(true, System.Drawing.Color.GreenYellow);
-            cog.Recognize(@$"{image}");
+            cog.Recognize($"{image}");
             if (cog.FaceFound)
             {
                 Console.WriteLine("Face Found!");
@@ -72,7 +72,7 @@ namespace UcuUber
                 }
             }
             else
-            {   
+            {
                 return false;
             }
         }

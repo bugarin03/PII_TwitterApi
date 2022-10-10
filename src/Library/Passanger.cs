@@ -18,7 +18,7 @@ namespace UcuUber
             this.PhoneNumber = phoneNumber;
             this.UserId = userId;
             var twitter = new TwitterImage();
-            Console.WriteLine(twitter.PublishToTwitter($"Nuevo pasagero:\n {Name} ", @$"{image}"));
+            Console.WriteLine(twitter.PublishToTwitter($"Nuevo pasajero:\n {Name} ", @$"{Image}"));
             data.NewPassanger(this);
             if (FoundFace(image))
             {
@@ -27,7 +27,7 @@ namespace UcuUber
             else
             {
                 Console.WriteLine("No hemos encontrado su hermosa cara, le hemos reasignado una foto");
-                this.Image = @"PII_TwitterApi\src\Imagenes\guest.png"; 
+                this.Image = @"..\Imagenes\guest.png"; 
             }
         }
        public Call Call(Info data, string destination, int passangersAmount)
