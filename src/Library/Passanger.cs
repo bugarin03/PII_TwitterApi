@@ -18,7 +18,7 @@ namespace UcuUber
        public void Call(string destination, int passangersAmount)
        {
             Call trip = new Call (this, destination, passangersAmount);
-            Info.Notification(passangersAmount)
+            Info.Notification(trip)
        }
 
        public void RateDriver(Driver driver, int rating)
