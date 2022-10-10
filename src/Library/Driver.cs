@@ -11,7 +11,7 @@ namespace UcuUber
         public int Capacity {get; set;}
         public string Bio {get; set;}
 
-        public Driver (int capacity, string name, string surname, string id, string phoneNumber, string userId, string bio, string image )
+        public Driver (int capacity, string name, string surname, string id, string phoneNumber, string userId, string bio, string image, Info data )
         {
             this.Name = name;
             this.Surname = surname;
@@ -23,6 +23,7 @@ namespace UcuUber
             this.Image = image;
             var twitter = new TwitterImage();
             Console.WriteLine(twitter.PublishToTwitter($"Nuevo conductor: \nBienvenido a nuestra comunidad {Name} \n {Bio}",  @$"{image}"));
+            data.NewDriver(this);
         }
         
         public void AceptCall (Info data, Call call)

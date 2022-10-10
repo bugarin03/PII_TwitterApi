@@ -33,6 +33,8 @@ namespace UcuUber
 
         public List<Passanger> Passangers { get; set; } = new List<Passanger>();
 
+        public List<Passanger> PassangersOnBoard { get; set; } = new List<Passanger>();
+
         public List<Call> NormalCalls { get; set; } = new List<Call>();
 
         public List<Call> PoolCalls { get; set; } = new List<Call>();
@@ -58,6 +60,23 @@ namespace UcuUber
                 }
             }
         }
+
+        public void NewDriver (Driver driver)
+        {
+            if (driver.Capacity==1)
+            {
+                FreeNormalDrivers.Add(driver);
+            }
+            else
+            {
+                FreePoolDrivers.Add(driver);
+            }
+        }
+
+        public void NewPassanger (Passanger passanger)
+        {
+            Passangers.Add(passanger);
+        }
         public void StartJorney (Driver driver, Call call)
         {
             if (driver.Capacity==1)
@@ -73,7 +92,7 @@ namespace UcuUber
                 BusyPoolDrivers.Add(driver);
             }
 
-            Passangers.Add(call.Passanger);
+            PassangersOnBoard.Add(call.Passanger);
 
         }
         public  void FinishJorney (Driver driver, Call call)
@@ -89,7 +108,7 @@ namespace UcuUber
                 BusyPoolDrivers.Remove(driver);
             }
 
-            Passangers.Remove(call.Passanger);
+            PassangersOnBoard.Remove(call.Passanger);
         }
     }
 }
