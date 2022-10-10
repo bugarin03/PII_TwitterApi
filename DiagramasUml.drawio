@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="h2ausnnGMONv08gCMSYq" name="Página-1">
-        <mxGraphModel dx="950" dy="410" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="840" dy="328" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -81,7 +81,7 @@
                 <mxCell id="2NP4AydjIx5wnO26K9SO-10" value="Puede ser que sea con un constructor que indiwue q tipo de conductori seria cada uno " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="1" vertex="1">
                     <mxGeometry x="-44" y="847" width="542" height="124" as="geometry"/>
                 </mxCell>
-                <mxCell id="2NP4AydjIx5wnO26K9SO-11" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+ Name : string&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+ Surname : string&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+ Id : int&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+ Rating : Rating&lt;/span&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                <mxCell id="2NP4AydjIx5wnO26K9SO-11" value="&lt;div style=&quot;font-size: 9px&quot;&gt;&lt;font style=&quot;font-size: 9px&quot;&gt;+ Name : string&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 9px&quot;&gt;&lt;span&gt;&lt;font style=&quot;font-size: 9px&quot;&gt;+ Surname : string&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 9px&quot;&gt;&lt;span&gt;&lt;font style=&quot;font-size: 9px&quot;&gt;+ Id : int&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 9px&quot;&gt;&lt;span&gt;&lt;font style=&quot;font-size: 9px&quot;&gt;+ Rating : Rating&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 9px&quot;&gt;&lt;font style=&quot;font-size: 9px&quot;&gt;+ PhoneNumer : string&lt;/font&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="131" y="181" width="148" height="66" as="geometry"/>
                 </mxCell>
                 <mxCell id="2NP4AydjIx5wnO26K9SO-12" value="" style="rounded=0;whiteSpace=wrap;html=1;hachureGap=4;gradientColor=none;fillColor=default;" parent="1" vertex="1">
@@ -104,7 +104,7 @@
                         <Array as="points"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="2NP4AydjIx5wnO26K9SO-16" value="&lt;div style=&quot;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;+Car : sting&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;+Capacity : int&lt;/div&gt;&lt;div style=&quot;&quot;&gt;+Free : bool&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;+Biograpy : string&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                <mxCell id="2NP4AydjIx5wnO26K9SO-16" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+Car : sting&amp;nbsp;&lt;/div&gt;&lt;div&gt;+Capacity : int&lt;/div&gt;&lt;div&gt;+Bio : string&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="279" y="419" width="148.44" height="85" as="geometry"/>
                 </mxCell>
                 <mxCell id="2NP4AydjIx5wnO26K9SO-17" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;endArrow=none;startSize=14;endSize=14;sourcePerimeterSpacing=8;curved=1;endFill=0;exitX=0.005;exitY=0.221;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="2NP4AydjIx5wnO26K9SO-5" target="2NP4AydjIx5wnO26K9SO-16" edge="1">
@@ -207,11 +207,8 @@
                         <Array as="points"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="7" value="&lt;div style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;+AceptCall () : void&amp;nbsp;&lt;/font&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-                    <mxGeometry x="-74" y="737" width="148.44" height="76" as="geometry"/>
-                </mxCell>
-                <mxCell id="8" value="+ PassangersAmount" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
-                    <mxGeometry x="-73.56" y="670" width="148.56" height="66" as="geometry"/>
+                <mxCell id="8" value="&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;+ PassengersAmount : int&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;+ Passenger : Passenger&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;+ Destination : string&lt;/span&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="-74.12" y="669" width="148.56" height="66" as="geometry"/>
                 </mxCell>
                 <mxCell id="9" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;endArrow=none;startSize=14;endSize=14;sourcePerimeterSpacing=8;curved=1;endFill=0;exitX=0.005;exitY=0.221;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="2" target="8">
                     <mxGeometry width="120" relative="1" as="geometry">
