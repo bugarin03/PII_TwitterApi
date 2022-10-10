@@ -4,9 +4,9 @@ namespace UcuUber
 {
     public class Call
     {
-        public int PassangersAmount;
-        public Passanger Passanger;
-        public string Destination;
+        public int PassangersAmount {get; set;}
+        public Passanger Passanger {get; set;}
+        public string Destination {get; set;}
 
         public Call (Passanger pasanger, string destination, int passangersAmount)
         {

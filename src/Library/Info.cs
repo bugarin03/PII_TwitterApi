@@ -39,11 +39,11 @@ namespace UcuUber
 
         public void Notification (Call call)
         {
-            if (call.passangersAmount==1)
+            if (call.PassangersAmount==1)
             {
                 foreach (Driver driver in FreeNormalDrivers)
                 {
-                    NormalCalls.Add(call)
+                    NormalCalls.Add(call);
                     var twitter = new TwitterMessage();
                     twitter.SendMessage("Nuevo viaje disponible", driver.UserId);
                 }
@@ -52,7 +52,7 @@ namespace UcuUber
             {
                 foreach (Driver driver in FreePoolDrivers)
                 {
-                    PoolCalls.Add(call)
+                    PoolCalls.Add(call);
                     var twitter = new TwitterMessage();
                     twitter.SendMessage("Nuevo viaje disponible", driver.UserId);
                 }
@@ -64,18 +64,18 @@ namespace UcuUber
 
             if (driver.Capacity==1)
             {
-                NormalCalls.Remove(call)
+                NormalCalls.Remove(call);
                 FreeNormalDrivers.Remove(driver);
                 BusyNormalDrivers.Add(driver);
             }
             else
             {
-                PoolCalls.Remove(call)
+                PoolCalls.Remove(call);
                 FreePoolDrivers.Remove(driver);
                 BusyPoolDrivers.Add(driver);
             }
 
-            Passangers.Add(call.passanger);
+            Passangers.Add(call.Passanger);
 
         }
         public  void FinishJorney (Driver driver, Call call)
@@ -91,7 +91,7 @@ namespace UcuUber
                 BusyPoolDrivers.Remove(driver);
             }
 
-            Passangers.Remove(call.passanger);
+            Passangers.Remove(call.Passanger);
         }
     }
 }
