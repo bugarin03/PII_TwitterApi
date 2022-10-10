@@ -18,6 +18,7 @@ namespace TwitterUCU
             Passanger Gonzalo = new Passanger( "Gonzalo", "Domingez", "5874139-5", "094587458", "123456789", @"PII_TwitterApi\src\Imagenes\descargar.jpg", Lists);
             Call trip = Gonzalo.Call(Lists, "Feria", 2);
             Pepe.AceptCall(Lists,trip);
+            Pepe.SuccessfulTrip(Lists,trip);
             
         }
     }
