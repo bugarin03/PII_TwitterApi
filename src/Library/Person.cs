@@ -25,5 +25,7 @@ namespace UcuUber
         /// </summary>
         /// <value>El promedio de los puntajes que le fueron asignados.</value>
         public Rating Rating { get; set; }
+
+        public string UserId;
     }
 }

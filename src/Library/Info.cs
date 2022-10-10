@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Collections;
+using TwitterUCU;
 namespace UcuUber
 {
     public class Info
@@ -32,24 +33,26 @@ namespace UcuUber
 
         public List<Passanger> Passangers { get; set; } = new List<Passanger>();
 
-        public void Call (int passangersAmount)
+        public void Notification (int passangersAmount)
         {
             if (passangersAmount==1)
             {
                 foreach (Driver driver in FreeNormalDrivers)
                 {
-                    
+                    var twitter = new TwitterMessage();
+                    twitter.SendMessage("Nuevo viaje disponible", driver.UserId);
                 }
             }
             else
             {
                 foreach (Driver driver in FreePoolDrivers)
                 {
-                    
+                    var twitter = new TwitterMessage();
+                    twitter.SendMessage("Nuevo viaje disponible", driver.UserId);
                 }
             }
         }
-        public  void StartJorney (Driver driver, Passanger passanger )
+        public void StartJorney (Driver driver, Passanger passanger )
         {
 
 

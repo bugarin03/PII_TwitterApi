@@ -5,9 +5,11 @@ namespace UcuUber
     /// </summary>
     public class Passanger : Person
     {
-       public void Call()
+        
+       public void Call(string destination, int passangersAmount)
        {
-            
+            Call trip = new Call (this, destination, passangersAmount);
+            Info.Notification(passangersAmount)
        }
 
        public void RateDriver(Driver driver, int rating)

@@ -7,6 +7,18 @@ namespace UcuUber
     {
         public int Capacity {get; set;}
 
+        public void AceptCall (Call call)
+        {
+            if (call.PassangersAmount>1 && this.Capacity>1)
+            {
+                Info.StartJorney(this, call.Passanger);
+            }
+            else
+            {
+
+            }
+        }
+
         public void RatePassanger(Passanger passanger, int rating)
         {
             passanger.Rating.EffectiveRating = passanger.Rating.AddRating(rating);
