@@ -7,6 +7,18 @@ namespace UcuUber
     {
         public int Capacity {get; set;}
 
+        public Driver (int capacity, string name, string surname, string id, string phoneNumber, string userId )
+        {
+            this.Name = name
+            this.Surname = surname
+            this.Capacity = capacity
+            this.ID = id
+            this.PhoneNumber = phoneNumber
+            this.UserId = userId
+            var twitter = new TwitterImage();
+            Console.WriteLine(twitter.PublishToTwitter("Nuevo conductor", @"PathToImage.png"));
+        }
+        
         public void AceptCall (Call call)
         {
             if (call.PassangersAmount>1 && this.Capacity>1)
@@ -15,8 +27,8 @@ namespace UcuUber
             }
             else
             {
-
-            }
+                Info.StartJorney(this, call.Passanger);
+            }  
         }
 
         public void RatePassanger(Passanger passanger, int rating)
