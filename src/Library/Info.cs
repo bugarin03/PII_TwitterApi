@@ -64,11 +64,13 @@ namespace UcuUber
 
             if (driver.Capacity==1)
             {
+                NormalCalls.Remove(call)
                 FreeNormalDrivers.Remove(driver);
                 BusyNormalDrivers.Add(driver);
             }
             else
             {
+                PoolCalls.Remove(call)
                 FreePoolDrivers.Remove(driver);
                 BusyPoolDrivers.Add(driver);
             }
@@ -90,7 +92,6 @@ namespace UcuUber
             }
 
             Passangers.Remove(call.passanger);
-
         }
     }
 }
