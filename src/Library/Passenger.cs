@@ -8,9 +8,9 @@ namespace UcuUber
     /// <summary>
     /// Esta clase se encarga de calcular la reputación tanto de un conductor como de un pasajero.
     /// </summary>
-    public class Passanger : Person
+    public class Passenger : Person
     {
-        public Passanger (string name, string surname, string id, string phoneNumber, string userId, string image, Info data)
+        public Passenger (string name, string surname, string id, string phoneNumber, string userId, string image, Info data)
         {
             this.Name = name;
             this.Surname = surname;

@@ -50,7 +50,7 @@ namespace UcuUber
             data.FinishJourney(this, call);
         }
 
-        public void RatePassanger(Passanger passanger, int rating)
+        public void RatePassenger(Passenger passanger, int rating)
         {
             passanger.Rating.EffectiveRating = passanger.Rating.AddRating(rating);
         }

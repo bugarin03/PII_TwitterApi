@@ -14,7 +14,7 @@ namespace TwitterUCU
             var twitterDirectMessage = new TwitterMessage();
             Console.WriteLine(twitterDirectMessage.SendMessage("Hola!", "1396065818"));
             Driver Pepe = new Driver(4, "Pepe", "Gonzales", "Supra", "5874139-5", "094587458", "123456789", "buen conductor", @"..\Imagenes\descargar.jpg", Lists);
-            Passanger Gonzalo = new Passanger("Gonzalo", "Domingez", "5874139-5", "094587458", "123456789", @"..\Imagenes\descargar.jpg", Lists);
+            Passenger Gonzalo = new Passenger("Gonzalo", "Domingez", "5874139-5", "094587458", "123456789", @"..\Imagenes\descargar.jpg", Lists);
             Call trip = Gonzalo.Call(Lists, "Feria", 2);
             Pepe.AceptCall(Lists, trip);
             Pepe.SuccessfulTrip(Lists, trip);

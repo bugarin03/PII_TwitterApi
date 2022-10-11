@@ -178,6 +178,15 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
+                <mxCell id="20" style="edgeStyle=none;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=classicThin;endFill=1;" edge="1" parent="1" source="00fC73_3xEAyOy2aGItD-22" target="2NP4AydjIx5wnO26K9SO-1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="527" y="871"/>
+                            <mxPoint x="-86" y="871"/>
+                            <mxPoint x="-86" y="508"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
                 <mxCell id="00fC73_3xEAyOy2aGItD-22" value="&lt;span style=&quot;font-size: 10px&quot;&gt;+ Notification( call : Call) : void&lt;br&gt;+ NewDriver (driver : Driver) : void&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 10px&quot;&gt;+ NewPassenger (passenger :Passenger ) : void&lt;/span&gt;&lt;span style=&quot;font-size: 10px&quot;&gt;&lt;br&gt;+ FinishJourney(driver : Driver , call : Call) : void&lt;br&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="369" y="748" width="220" height="71" as="geometry"/>
                 </mxCell>
@@ -232,6 +241,27 @@
                         <mxPoint x="-74" y="668.5034871303396" as="targetPoint"/>
                         <Array as="points"/>
                     </mxGeometry>
+                </mxCell>
+                <mxCell id="21" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="423" y="820" width="17" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="532" y="820" width="17" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="589" y="610" width="17" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="0..*" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="189" y="520" width="28" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="0..*" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="116" y="379" width="28" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="0..*" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="-7" y="601" width="28" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="0..*" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="90" y="600" width="28" height="18" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>

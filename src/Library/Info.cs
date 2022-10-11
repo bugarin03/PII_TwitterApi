@@ -31,9 +31,9 @@ namespace UcuUber
 
         public List<Driver> BusyPoolDrivers { get; set; } = new List<Driver>();
 
-        public List<Passanger> Passangers { get; set; } = new List<Passanger>();
+        public List<Passenger> Passengers { get; set; } = new List<Passenger>();
 
-        public List<Passanger> PassangersOnBoard { get; set; } = new List<Passanger>();
+        public List<Passenger> PassengersOnBoard { get; set; } = new List<Passenger>();
 
         public List<Call> NormalCalls { get; set; } = new List<Call>();
 
@@ -41,7 +41,7 @@ namespace UcuUber
 
         public void Notification(Call call)
         {
-            if (call.PassangersAmount == 1)
+            if (call.PassengersAmount == 1)
             {
                 foreach (Driver driver in FreeNormalDrivers)
                 {
@@ -73,9 +73,9 @@ namespace UcuUber
             }
         }
 
-        public void NewPassanger(Passanger passanger)
+        public void NewPassanger(Passenger passenger)
         {
-            Passangers.Add(passanger);
+            Passengers.Add(passenger);
         }
         public void StartJourney(Driver driver, Call call)
         {
@@ -85,7 +85,7 @@ namespace UcuUber
                 FreeNormalDrivers.Remove(driver);
                 BusyNormalDrivers.Add(driver);
                  var twitter = new TwitterMessage();
-                twitter.SendMessage("Su conductor esta en camino", call.Passanger.UserId);
+                twitter.SendMessage("Su conductor esta en camino", call.Passenger.UserId);
             }
             else
             {
@@ -93,10 +93,10 @@ namespace UcuUber
                 FreePoolDrivers.Remove(driver);
                 BusyPoolDrivers.Add(driver);
                 var twitter = new TwitterMessage();
-                twitter.SendMessage("Su conductor esta en camino", call.Passanger.UserId);
+                twitter.SendMessage("Su conductor esta en camino", call.Passenger.UserId);
             }
 
-            PassangersOnBoard.Add(call.Passanger);
+            PassengersOnBoard.Add(call.Passenger);
 
         }
         public void FinishJourney(Driver driver, Call call)
@@ -112,7 +112,7 @@ namespace UcuUber
                 BusyPoolDrivers.Remove(driver);
             }
 
-            PassangersOnBoard.Remove(call.Passanger);
+            PassengersOnBoard.Remove(call.Passenger);
         }
     }
 }

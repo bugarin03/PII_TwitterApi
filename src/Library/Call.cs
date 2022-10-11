@@ -4,15 +4,15 @@ namespace UcuUber
 {
     public class Call
     {
-        public int PassangersAmount {get; set;}
-        public Passanger Passanger {get; set;}
+        public int PassengersAmount {get; set;}
+        public Passenger Passenger {get; set;}
         public string Destination {get; set;}
 
-        public Call (Passanger pasanger, string destination, int passangersAmount)
+        public Call (Passenger passenger, string destination, int passengersAmount)
         {
-            this.Passanger = pasanger;
+            this.Passenger = passenger;
             this.Destination = destination;
-            this.PassangersAmount = passangersAmount;  
+            this.PassengersAmount = passengersAmount;  
         }
     }
 }
