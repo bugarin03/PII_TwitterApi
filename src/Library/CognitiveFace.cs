@@ -37,7 +37,7 @@ namespace CognitiveCoreUCU
         /// Indica si se debe dibujar un recuadro en cada cara encontrada
         /// </summary>
         /// <value></value>
-        public bool MarkFaces {get;set;}
+        public bool MarkFaces { get; set; }
         Rgba32 boxColor;
         /// <summary>
         /// Indica si la ultima llamada encontró o no una cara en la imagen
@@ -48,7 +48,7 @@ namespace CognitiveCoreUCU
         /// Indica si la ultima llamada encontró una sonrisa o no
         /// </summary>
         /// <value></value>
-        public bool SmileFound {get; private set;}
+        public bool SmileFound { get; private set; }
         /// <summary>
         /// Esta clase se encarga de consultar el servicio cloud para encontrar caras en las fotos
         /// </summary>
@@ -59,32 +59,32 @@ namespace CognitiveCoreUCU
             if (!initialized)
             {
                 AsyncContext.Run(InitializeAsync);
-				initialized = true;
+                initialized = true;
             }
 
-            if(boxColor is null)
+            if (boxColor is null)
             {
                 this.MarkFaces = false;
             }
             else
             {
-                this.boxColor = new Rgba32(boxColor.Value.R,boxColor.Value.G,boxColor.Value.B,boxColor.Value.A);
+                this.boxColor = new Rgba32(boxColor.Value.R, boxColor.Value.G, boxColor.Value.B, boxColor.Value.A);
             }
             this.MarkFaces = markFaces;
         }
 
-		private static async Task InitializeAsync()
-		{
-			HttpClient client = new HttpClient();
+        private static async Task InitializeAsync()
+        {
+            HttpClient client = new HttpClient();
             HttpResponseMessage response = await client.GetAsync(@"https://pii-secretsapiwebapp.azurewebsites.net/CognitiveApiSecrets");
             string result = await response.Content.ReadAsStringAsync();
             CognitiveApiSecrets secrets = System.Text.Json.JsonSerializer.Deserialize<CognitiveApiSecrets>(result,
-                new JsonSerializerOptions { PropertyNamingPolicy  = JsonNamingPolicy.CamelCase });
+                new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase });
 
-			subscriptionKey = secrets.SubscriptionKey;
+            subscriptionKey = secrets.SubscriptionKey;
 
-			//sigHasher = new HMACSHA1(new ASCIIEncoding().GetBytes(string.Format("{0}&{1}", consumerKeySecret, accessTokenSecret)));
-		}
+            //sigHasher = new HMACSHA1(new ASCIIEncoding().GetBytes(string.Format("{0}&{1}", consumerKeySecret, accessTokenSecret)));
+        }
 
         public void Recognize(string path)
         {
@@ -130,7 +130,7 @@ namespace CognitiveCoreUCU
 
                 // Get the JSON response.
                 string contentString = await response.Content.ReadAsStringAsync();
-List<CognitiveResult> resArray = JsonConvert.DeserializeObject<List<CognitiveResult>>(contentString);
+                List<CognitiveResult> resArray = JsonConvert.DeserializeObject<List<CognitiveResult>>(contentString);
                 this.SmileFound = false;
                 if (resArray.Count > 0)
                 {
@@ -139,7 +139,7 @@ List<CognitiveResult> resArray = JsonConvert.DeserializeObject<List<CognitiveRes
                 foreach (CognitiveResult face in resArray)
                 {
                     this.SmileFound = face.faceAttributes.smile > 0.6;
-                    if(this.MarkFaces)
+                    if (this.MarkFaces)
                     {
                         DrawRectangle(face, imageFilePath);
                     }
@@ -152,13 +152,13 @@ List<CognitiveResult> resArray = JsonConvert.DeserializeObject<List<CognitiveRes
             int y0 = face.faceRectangle.top;
             int width = face.faceRectangle.width;
             int height = face.faceRectangle.height;
-            SixLabors.Primitives.RectangleF recc = new SixLabors.Primitives.RectangleF(x0,y0,width,height);
+            SixLabors.Primitives.RectangleF recc = new SixLabors.Primitives.RectangleF(x0, y0, width, height);
             float thick = 4;
             using (Image<Rgba32> image = Image.Load(imgPath))
             {
-                image.Mutate(DrawRectangleExtensions=> DrawRectangleExtensions.Draw(
-                        color:boxColor,
-                        thickness:thick,
+                image.Mutate(DrawRectangleExtensions => DrawRectangleExtensions.Draw(
+                        color: boxColor,
+                        thickness: thick,
                         shape: recc
                     )
                 );
@@ -185,13 +185,13 @@ List<CognitiveResult> resArray = JsonConvert.DeserializeObject<List<CognitiveRes
             public string faceId { get; set; }
             public FaceRect faceRectangle { get; set; }
 
-            public FaceAttributes faceAttributes {get; set;}
+            public FaceAttributes faceAttributes { get; set; }
         }
         private class FaceAttributes
         {
-            public double age {get;set;}
-            public string gender {get;set;}
-            public double smile {get;set;}
+            public double age { get; set; }
+            public string gender { get; set; }
+            public double smile { get; set; }
         }
         private class FaceRect
         {

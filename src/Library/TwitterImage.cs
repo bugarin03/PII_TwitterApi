@@ -25,7 +25,7 @@ namespace TwitterUCU
         /// </summary>
         //readonly int _limit;
 
-        public TwitterImage() : base ()
+        public TwitterImage() : base()
         {
             _TwitterTextAPI = "https://api.twitter.com/1.1/statuses/update.json";
             _TwitterImageAPI = "https://upload.twitter.com/1.1/media/upload.json";
