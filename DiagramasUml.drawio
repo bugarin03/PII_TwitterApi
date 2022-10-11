@@ -135,6 +135,13 @@
                 <mxCell id="00fC73_3xEAyOy2aGItD-14" value="&lt;div&gt;&lt;span style=&quot;font-size: 10px&quot;&gt;+Car : sting&amp;nbsp;&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px&quot;&gt;&lt;div&gt;+Capacity : int&lt;/div&gt;&lt;div&gt;+Bio : string&lt;/div&gt;&lt;div&gt;&lt;br style=&quot;font-size: 12px&quot;&gt;&lt;/div&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px&quot;&gt;+ AceptCall (call : Call) : void&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px&quot;&gt;+ SuccesfulTrip (call:Call):void&lt;/font&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 10px&quot;&gt;+ RatePassenger(passenger: Passenger , rating : int) : void&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 10px&quot;&gt;+ FoundFace(image : string) : bool&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="279" y="447" width="270" height="153" as="geometry"/>
                 </mxCell>
+                <mxCell id="18" style="edgeStyle=none;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=1.002;entryY=0.154;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=none;startFill=0;endArrow=classicThin;endFill=1;" edge="1" parent="1" source="00fC73_3xEAyOy2aGItD-16" target="00fC73_3xEAyOy2aGItD-14">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="589" y="471"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
                 <mxCell id="00fC73_3xEAyOy2aGItD-16" value="" style="rounded=0;whiteSpace=wrap;html=1;hachureGap=4;gradientColor=none;fillColor=default;" parent="1" vertex="1">
                     <mxGeometry x="369.44" y="630" width="219.56" height="190" as="geometry"/>
                 </mxCell>
@@ -160,6 +167,15 @@
                         <mxPoint x="370.18000000000006" y="670.885" as="sourcePoint"/>
                         <mxPoint x="369" y="670.5034871303396" as="targetPoint"/>
                         <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="19" style="edgeStyle=none;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;startArrow=none;startFill=0;endArrow=classicThin;endFill=1;" edge="1" parent="1" source="00fC73_3xEAyOy2aGItD-22">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-23.59272370515053" y="818.8148148148148" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="424" y="842"/>
+                            <mxPoint x="-24" y="842"/>
+                        </Array>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="00fC73_3xEAyOy2aGItD-22" value="&lt;span style=&quot;font-size: 10px&quot;&gt;+ Notification( call : Call) : void&lt;br&gt;+ NewDriver (driver : Driver) : void&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 10px&quot;&gt;+ NewPassenger (passenger :Passenger ) : void&lt;/span&gt;&lt;span style=&quot;font-size: 10px&quot;&gt;&lt;br&gt;+ FinishJourney(driver : Driver , call : Call) : void&lt;br&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">

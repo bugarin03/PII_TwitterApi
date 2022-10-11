@@ -84,8 +84,8 @@ namespace UcuUber
                 NormalCalls.Remove(call);
                 FreeNormalDrivers.Remove(driver);
                 BusyNormalDrivers.Add(driver);
-                // var twitter = new TwitterMessage();
-                //twitter.SendMessage("Su conductor esta en camino", call.Passanger.UserId);
+                 var twitter = new TwitterMessage();
+                twitter.SendMessage("Su conductor esta en camino", call.Passanger.UserId);
             }
             else
             {
